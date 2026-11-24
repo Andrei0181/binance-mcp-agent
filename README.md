@@ -31,28 +31,37 @@ API-ключи не нужны и не используются.
 
 ## Запуск
 
-    npm install
-    npm run build
-    node build/index.js
+```bash
+npm install
+npm run build
+node build/index.js
+```
 
 Подключение к MCP-клиенту: команда `node`, аргумент `<путь>/build/index.js`, транспорт stdio.
 
 ## Проверка
 
-    npm test                 # Jest: живые тесты против Binance (цена, -1121, таймаут)
-    node tests/tools.mjs     # офлайн-тесты первых четырёх инструментов (заглушка Binance)
-    node tests/tools-extra.mjs  # офлайн-тесты get_avg_price, get_server_time, check_symbol
-    node tests/tools-trades.mjs # офлайн-тесты get_recent_trades
-    node tests/tools-cache.mjs  # офлайн-тесты кеша
-    node tests/tools-guard.mjs  # офлайн-тесты защиты от лимитов (заглушка с 429/418)
-    node tests/tools-validate.mjs  # офлайн-тесты validate_signal
-    node scripts/check-readme.mjs  # сверка README с кодом
-    node smoke-live.mjs      # живой вызов инструментов через MCP-клиент
-    npm run measure          # измерение весов запросов, результат в docs/rate-limits.md
+```bash
+npm test
+node tests/tools.mjs
+node tests/tools-extra.mjs
+node tests/tools-trades.mjs
+node tests/tools-cache.mjs
+node tests/tools-guard.mjs
+node tests/tools-validate.mjs
+node scripts/check-readme.mjs
+npm run measure
+```
+
+Назначение проверок:
+- `npm test` — Jest: живые тесты против Binance (цена, -1121, таймаут).
+- `tests/tools*.mjs` — офлайн-тесты инструментов и защитных механизмов.
+- `scripts/check-readme.mjs` — сверка README с кодом.
+- `npm run measure` — измерение весов запросов.
 
 ## Лимиты
 
-Измерено 2026-10-16 на https://api.binance.com (скрипт scripts/measure-weights.mjs, полный результат в docs/rate-limits.md).
+Измерено 2026-11-24 на https://api.binance.com (скрипт scripts/measure-weights.mjs, полный результат в docs/rate-limits.md).
 
 | Инструмент | Запрос | Вес |
 |---|---|---|
