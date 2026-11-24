@@ -3,6 +3,8 @@
 Учебный MCP-сервер (TypeScript, stdio) для публичных рыночных данных Binance Spot.
 API-ключи не нужны и не используются.
 
+> Part of the **BERESTOV Web3 Tools** portfolio. See [Portfolio Overview](PORTFOLIO_OVERVIEW.md) for the wider project catalogue and potential ecosystem applications.
+
 ## Инструменты
 
 | Инструмент | Назначение | Параметры |
