@@ -8,3 +8,4 @@ build/
 coverage/
 *.bak
 .DS_Store
+signals_pair_arbitrage.jsonl
